@@ -26,7 +26,7 @@ def encode(msg, shift):
             # Cipher the character based on the shift number
             newch = chr((ord(ch) - ord('a') + shift) % 26 + ord('a'))
         else:
-            # Note that a string object in Python is immutable
+            # 4. Note that a string object in Python is immutable
             newch = ch
 
         #later while looping over each ch on the old message, you can make new message by attaching the new character encoded
