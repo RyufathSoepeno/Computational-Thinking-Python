@@ -1,4 +1,68 @@
 # Question 1
+import datetime
+# Define dictionaries for month names and ordinal numbers
+month_names = {
+    1: "January",
+    2: "February",
+    3: "March",
+    4: "April",
+    5: "May",
+    6: "June",
+    7: "July",
+    8: "August",
+    9: "September",
+    10: "October",
+    11: "November",
+    12: "December",
+}
+ordinal_numbers = {
+    1: "st",
+    2: "nd",
+    3: "rd",
+    21: "st",
+    22: "nd",
+    23: "rd",
+    31: "st",
+}
+
+
+def convert_date_to_words(date_str):
+    """
+    Converts a date string in YYYY-MM-DD format to words.
+
+    Args:
+        date_str: The date string to convert.
+
+    Returns:
+        A string representing the date in words.
+    """
+
+    try:
+        # Convert date string to datetime object
+        date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+
+        # Extract day, month, and year
+        day = date_obj.day
+        month = date_obj.month
+        year = date_obj.year
+
+        # Get ordinal suffix for the day
+        ordinal_suffix = ordinal_numbers.get(day, "th")
+
+        # Construct the string in words
+        date_in_words = f"{month_names[month]} {day}{ordinal_suffix}, {year}"
+
+        return date_in_words
+
+    except ValueError:
+        return "Invalid date format. Please use YYYY-MM-DD."
+
+# Get user input
+date_str = input("Enter a date in YYYY-MM-DD format: ")
+
+# Convert and print the date in words
+date_in_words = convert_date_to_words(date_str)
+print(date_in_words)
 
 # Question 2
 
