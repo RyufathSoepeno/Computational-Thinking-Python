@@ -66,16 +66,16 @@ print(date_in_words)
 
 # Question 2
 
-z = char(input("Press S to convert to capital letter; Press D to convert to lower letter"))
+z = input("Press S to convert to capital letter; Press D to convert to lowercase: ")
 
-if z == s:
-  ab = input("Input your letter")
-  ab.upper()
+if z.lower() == 's':
+    ab = input("Input your letter: ")
+    i = ab.upper()
 else:
-  ab = input("Input your letter")
-  ab.lower()
+    ab = input("Input your letter: ")
+    i = ab.lower()
 
-print(ab)
+print(i)
 
 #Question 3
 
