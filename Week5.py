@@ -93,3 +93,25 @@ while inGPA < 0 or inGPA > 4: #to ensure that input is between 0 and 4
 checkGPA(inGPA)#call function to check if accepted or not
 
 # Question 4
+def get_rating(grade):
+ 
+ # Return F, D, C, B, or A according to user input grade
+  if 0 <= grade <= 50:
+    return "F"
+  elif 51 <= grade <= 60:
+    return "D"
+  elif 61 <= grade <= 70:
+    return "C"
+  elif 71 <= grade <= 90:
+    return "B"
+  elif 91 <= grade <= 100:
+    return "A"
+  else:
+    return "Invalid grade"
+
+# Get user input and call the function
+grade = int(input("Enter your grade for Python course: "))
+rating = get_rating(grade)
+
+print(f"Your rating is {rating}")
+
