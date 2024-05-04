@@ -63,8 +63,8 @@ class FrameExtractor:
 # To make the code not hard-coded, I convert it to input file
 if __name__ == "__main__":
     while True:
-        input_file = input("Enter the filename and its file type (press 'f' to exit): ")
-        if input_file.lower() == 'f':
+        input_file = input("Enter the filename and its file type (press 'q' to exit): ")
+        if input_file.lower() == 'q':
             break
         frame_extractor = FrameExtractor(input_file)
         frame_extractor.read_file()
