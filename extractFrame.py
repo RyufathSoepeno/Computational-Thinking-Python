@@ -60,7 +60,7 @@ class FrameExtractor:
         return total_frames, self.ipv4_count, self.udp_count, self.tcp_count
 
 
-# To make the code not hard-coded, I convert it to input file
+# To make the code not hard-coded, I convert it to input functionality
 if __name__ == "__main__":
     while True:
         input_file = input("Enter the filename and its file type (press 'q' to exit): ")
