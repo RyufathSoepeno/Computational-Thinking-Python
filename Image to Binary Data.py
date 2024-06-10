@@ -4,4 +4,4 @@ def convert_to_binary(filename):
         binary_data = file.read()
     return binary_data
 
-print(convert_to_binary('MyImage.jpg'))
+print(convert_to_binary('C:\Users\TOSHIBA\Downloads\MyImage.jpg'))
